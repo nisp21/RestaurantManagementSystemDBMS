@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Login</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style2.css')}}">
+    
+    <!-- Swiper link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Font Awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>Bandhan</a>
+
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="#dishes">dishes</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">review</a>
+            <a href="#order">order</a>
+            <a href="/login">login</a>
+            <a href="/emp" class="active">Employees</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bar"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <i class="fas fa-user-alt" id="usericon"></i>
+        </div>
+    </header>
+
+
+	<div class="container">
+		<div class="img">
+			<!-- <img src="restaurant.jpg"> -->
+		</div>
+		<div class="login-box">
+			<h1>Add Employees to your Organisation</h1>
+			<form action="/emp" method="post">
+				<label for="name">Name</label>
+				<input type="text" name="name" placeholder="Enter Name">
+				<label for="surname">Surname</label>
+				<input type="text" name="surname" placeholder="Enter Surname">
+				<label for="city">City</label>
+				<input type="text" name="city" placeholder="Enter City">
+				<label for="phone">Phone_No</label>
+				<input type="text" name="phone" placeholder="Enter Phone_No">
+                <!-- <button ></button>
+                <button type="submit" name="Submit"> Submit -->
+				<button type="submit" id="btn" name="Submit" value="Submit">SUBMIT</button>
+
+                {{ message }}
+			</form>
+		</div>
+	</div>
+</body>
+
+<script>
+    // function alert(){
+    //     console.log("ajhdjfhdfshfskfhsfhsfiusfhsdfysdgfidsufhsuifhsyfsfisfisfhsfyh");
+    //     location.reload();
+    //     alert("jahrga");
+    //     return false;
+    // }
+</script>
+</html>
